@@ -1,0 +1,29 @@
+do_you_continue = str
+list = []
+fraction = []
+while do_you_continue != 'N':
+    fraction.append(str(input('Nome: ')))
+    first_note = float(input('Nota 1: '))
+    second_note = float(input('Nota 2: '))
+    average = (first_note + second_note) / 2
+    fraction.append(first_note)
+    fraction.append(second_note)
+    fraction.append(average)
+    list.append(fraction[:])
+    fraction.clear()
+    do_you_continue = str(input('Quer continuar ? [S/N] ')).upper().strip()[0]
+print('-='*30)
+print('No.', end='   ')
+print(f"{'Nome':^5}", end='   ')
+print('Média')
+print('-'*30)
+for l, c in enumerate(list):
+    print(f"{l}", end='   ')
+    print(f"{c[0]: ^8}", end=' ')
+    print(f"{c[3]: ^8}")
+print('-'*40)
+#while show_grades != 999:
+show_grades = int(input('Mostrar notas de quais alunos? '))
+for i in list:
+    if i == show_grades:
+        print([1][2])
