@@ -22,8 +22,13 @@ for l, c in enumerate(list):
     print(f"{c[0]: ^8}", end=' ')
     print(f"{c[3]: ^8}")
 print('-'*40)
-#while show_grades != 999:
-show_grades = int(input('Mostrar notas de quais alunos? '))
-for i in list:
-    if i == show_grades:
-        print([1][2])
+show_grades = True
+while show_grades != 999:
+    show_grades = int(input('Mostrar notas de quais alunos? (999 interrompe) '))
+    for i, j in enumerate(list):
+        if i == show_grades:
+            print(f"{[j[1]]}", end=' ')
+            print(f"{[j[2]]}")
+print('''FINALIZANDO...
+<<<VOLTE SEMPRE>>>''')
+
